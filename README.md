@@ -1,94 +1,78 @@
 # ❤️ Heart Disease Prediction using Machine Learning
 
-This project aims to predict whether a person is likely to have heart disease based on medical attributes using machine learning models. Early prediction can help reduce risk and guide early interventions.
+This project predicts whether a patient is likely to have heart disease using clinical features such as age, cholesterol, chest pain, and more. Early prediction helps with preventive healthcare and timely treatment.
 
 ---
 
 ## 📁 Dataset Overview
 
-- File: `heart_disease.csv`
 - Source: UCI Heart Disease Dataset
-- Records: ~300 patients
-- Features:
-  - `age`: Age of the patient
-  - `sex`: Gender (1 = male, 0 = female)
-  - `cp`: Chest pain type (0–3)
-  - `trestbps`: Resting blood pressure
-  - `chol`: Serum cholesterol (mg/dl)
-  - `fbs`: Fasting blood sugar (>120 mg/dl)
-  - `restecg`: Resting ECG results (0–2)
-  - `thalach`: Maximum heart rate
-  - `exang`: Exercise induced angina
-  - `oldpeak`: ST depression during exercise
-  - `slope`: Slope of ST segment (0–2)
-  - `ca`: No. of major vessels (0–3)
-  - `thal`: Thalassemia (1 = normal, 2 = fixed defect, 3 = reversible defect)
-  - `target`: Heart disease (1 = Yes, 0 = No)
+- Total Records: ~300
+- Columns:
+  - `age`, `sex`, `cp` (chest pain type), `trestbps` (resting BP), `chol` (cholesterol),
+  - `fbs` (fasting blood sugar), `restecg`, `thalach`, `exang`, `oldpeak`, `slope`, `ca`, `thal`, `target`
 
 ---
 
 ## 🎯 Project Objectives
 
-- Load and preprocess the dataset
-- Perform Exploratory Data Analysis (EDA)
-- Train and evaluate classification models
-- Compare accuracy, precision, recall, and F1-score
-- Predict likelihood of heart disease
+- Explore clinical features and their correlation with heart disease
+- Preprocess and clean the dataset
+- Train multiple machine learning models
+- Compare their performance and select the best one
 
 ---
 
-## ✅ Steps Performed
+## ✅ Tasks Performed
 
-### 1. Data Preprocessing
-- Checked for null or missing values
-- Converted categorical variables if needed
-- Feature scaling applied using `StandardScaler`
+### 1. Data Cleaning & Preprocessing
+- Checked for null values (none found)
+- Normalized numerical features using StandardScaler
 
-### 2. Exploratory Data Analysis
-- Distribution plots, correlation heatmaps
-- Insights on age, gender, and symptom relationships
+### 2. Exploratory Data Analysis (EDA)
+- Plotted feature distributions, target imbalance, and correlation matrix
+- Analyzed how age, chest pain, and cholesterol affect heart disease
 
 ### 3. Model Training
-- Trained:
+- Trained 3 classifiers:
   - Logistic Regression
   - Decision Tree
   - Random Forest
 
 ### 4. Model Evaluation
-- Used accuracy, precision, recall, and F1-score
-- Plotted confusion matrix
-- (Optional) Plotted ROC Curve
+- Used accuracy scores and classification reports
+- Random Forest showed the best performance
 
 ---
 
-## 📊 Results
+## 📊 Model Performance
 
-| Model            | Accuracy | Precision | Recall | F1-Score |
-|------------------|----------|-----------|--------|----------|
-| Logistic Reg.    | XX%      | XX%       | XX%    | XX%      |
-| Decision Tree    | XX%      | XX%       | XX%    | XX%      |
-| Random Forest    | **YY%**  | **YY%**   | **YY%**| **YY%**  |
+| Model              | Accuracy (%) |
+|--------------------|--------------|
+| Logistic Regression| 82.42        |
+| Decision Tree      | 82.42        |
+| Random Forest      | **84.62** ✅ |
 
-✅ Random Forest generally performs best on clinical data due to its robustness and ability to handle mixed features.
+✅ **Random Forest** had the best accuracy and performed well on both precision and recall.
 
 ---
 
-## 🛠️ Tools & Libraries Used
+## 🛠 Tools Used
 
 - Python
 - Pandas, NumPy
 - Scikit-learn
 - Matplotlib, Seaborn
-- Jupyter Notebook / Google Colab
+- Jupyter Notebook
 
 ---
 
-## 💡 Future Improvements
+## 💡 Future Work
 
-- Apply GridSearchCV for hyperparameter tuning
-- Use XGBoost or LightGBM for improved performance
-- Integrate with Streamlit for web-based prediction app
-- Add live input form for real-time prediction
+- Add GridSearchCV for hyperparameter tuning
+- Try advanced models (e.g., XGBoost, LightGBM)
+- Deploy as a web app using Streamlit
+- Add a user form to accept input and predict on-the-fly
 
 ---
 
